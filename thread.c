@@ -95,6 +95,7 @@ thread_init (void)
   list_init (&ready_list);
   list_init (&all_list);
   
+  //Initializes the global frametable
   // frametable_init();  
 
   /* Set up a thread structure for the running thread. */
