@@ -36,12 +36,18 @@ page_lookup (void *address)
   return e != NULL ? hash_entry (e, struct page, hash_elem) : NULL;
 } 
 
+//Initializes our hashmap that functions as our supplemental page table.
+//We decided on a hashmap because of it's efficiency in storing data.
 void
 SPT_init(struct hash *SPT) 
 {
   hash_init(SPT, page_hash, page_less, NULL);
 }
 
+//Initializes an entry for the supplemental page table. Called in
+//load_segment(). Initializes all the instance fields in the page
+//struct with the information in load_segment(). Also inserts the
+//struct into the hashmap.
 bool 
 page_init (enum page_location page_loc, struct file *file, uint32_t ofs, 
             uint8_t *upage, uint32_t read_bytes, uint32_t zero_bytes, 
