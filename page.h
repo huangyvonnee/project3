@@ -1,7 +1,7 @@
 #include "lib/kernel/hash.h"
 #include "threads/thread.h"
 #include <inttypes.h>
-
+//Anika driving now
 //Our supplemental page table entries need to store their location.
 enum page_location {
 	IN_FRAME, 					/* Page is in frame. */
@@ -26,7 +26,7 @@ struct page
   	uint32_t pg_zero_bytes;		/* Number of bytes to initialize to 0 */
   	bool writable;				/* Should file be writable or not*/
   };
-
+//Pearl driving now
 unsigned page_hash (const struct hash_elem *p_, void *aux);
 bool page_less (const struct hash_elem *a_, const struct hash_elem *b_,
            void *aux UNUSED);

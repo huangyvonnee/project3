@@ -479,7 +479,7 @@ load_segment (struct file *file, off_t ofs, uint8_t *upage,
       /* Get a page of memory. */
       uint8_t *kpage = palloc_get_page (PAL_USER);
 
-
+      //Mohammad driving now
       memset (kpage + page_read_bytes, 0, page_zero_bytes);
 
       //This page init basically replaces the need to have lines

@@ -6,7 +6,7 @@
 #include <list.h>
 #include "threads/thread.h"
 #include <string.h>
-
+//Mohammad driving now
 //Initializes the frametable, which is an array of pointers to frame structs.
 //We decided to palloc and create all the frames at the start. This makes
 //getting a frame easier and have less overhead.
@@ -55,7 +55,7 @@ falloc_get_frame() {
 		return NULL;
 	}
 }
-
+//Anika driving now
 //Frees a frame that was previously in use. Given a pointer to a page,
 //we go through the frametable and look for a for a frame that points
 //to the page we were given. If we find it, free the page and reset

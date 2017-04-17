@@ -1,6 +1,6 @@
 #include "vm/page.h"
 
-
+//Pearl driving now
 /* Returns a hash value for page p. */
 // Taken from PintOS documentation - A.8.5
 unsigned
@@ -21,7 +21,7 @@ page_less (const struct hash_elem *a_, const struct hash_elem *b_,
 
   return a->addr < b->addr;
 }
- 	
+//Yvonne driving now 	
 /* Returns the page containing the given virtual address,
    or a null pointer if no such page exists. */
 // Taken from PintOS documentation - A.8.5

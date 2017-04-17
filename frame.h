@@ -6,7 +6,7 @@
 #include <stdbool.h>
 #include <inttypes.h>
 #include <synch.h>
-
+//Yvonne driving now
 //Found through running the tests - the number of frames allocated in the
 //user pool was always 367. We could get this number ourselves by looping
 //palloc_get_page(PAL_USER) as much as possible and counting that number,
@@ -37,7 +37,7 @@ struct frame {
 	tid_t owner;              	/* Thread owner */
 	enum frame_status status; 	/* Status of the frame */
 };
-
+// Pearl driving now
 void frametable_init(void);
 void *falloc_get_frame();
 void falloc_free_frame(void *page);
