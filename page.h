@@ -2,6 +2,7 @@
 #include "threads/thread.h"
 #include <inttypes.h>
 
+//Our supplemental page table entries need to store their location.
 enum page_location {
 	IN_FRAME, 					/* Page is in frame. */
 	IN_SWAP,					/* Page is in swap. */
@@ -9,6 +10,11 @@ enum page_location {
 								   yet loaded. */
 };
 
+//The struct we used for our supplemental page table entry. Stores it's
+//location, a hash_elem (because our supplemental page table is a hash map),
+//the address of the actual page, the file it reads from, it's offset,
+//how many bytes to read and how many bytes to zero, as well as a boolean
+//that tells us if it's writable.
 struct page
   {
   	enum page_location pageloc;	/* Location of the page. */
