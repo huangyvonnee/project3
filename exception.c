@@ -151,6 +151,18 @@ page_fault (struct intr_frame *f)
   //checks for errors that would go into bad read, write etc. tests
   if(not_present || user)
     exit(-1);
+
+
+  //CODE FOR LOOKING UP PAGES WHEN PAGE FAULTS HAPPEN
+  //First step is to check the pointer and see if it's valid
+  //Second step is to lookup the fault address in the supplemental page table
+  //Third step is to check the page's location
+  //If the address is pointing to a page in memory or in frame, then
+  //Fourth step is to get a frame from our frame allocator
+  //Fifth step is to install the page in our active page directory
+  //If the address is pointing to a page in swap, then
+  //Fourth step is to _____
+
   /*
   if(is_user_vaddr(fault_addr)) {  
     struct page *pag = page_lookup(fault_address);
@@ -161,20 +173,9 @@ page_fault (struct intr_frame *f)
       install_page(pag, fram, true);
     } 
   }
-
 */
-    // if (kpage == NULL)
-    //  return false;
 
-    // /* Load this page. */
-    // if (file_read (file, kpage, page_read_bytes) != (int) page_read_bytes)
-    //   {
-    //     // falloc_free_frame(fram);
-    //     palloc_free_page (kpage);
-    //     return false; 
-    //   }
-    //  memset (kpage + page_read_bytes, 0, page_zero_bytes);
-
+  
 
   /* To implement virtual memory, delete the rest of the function
      body, and replace it with code that brings in the page to
