@@ -482,6 +482,9 @@ load_segment (struct file *file, off_t ofs, uint8_t *upage,
 
       memset (kpage + page_read_bytes, 0, page_zero_bytes);
 
+      //This page init basically replaces the need to have lines
+      //490 - 506. No more need to prepage everything - instead we have a
+      //switch to demand paging.
       // page_init(IN_FRAME, file, ofs, upage, read_bytes, zero_bytes, writable);
 
       if (kpage == NULL)
