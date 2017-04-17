@@ -120,8 +120,8 @@ struct thread
     bool load_status;                   /* Whether file was loaded. */
     struct file* executable;            /* Pointer to the process' executable 
                                            file. */
-    struct hash SPT;            /* Supplemental Page Table for each
-                                            process. */
+    struct hash SPT;            /* Supplemental Page Table per process. */
+          
     
   };  
 
